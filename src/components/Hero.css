@@ -1,33 +1,222 @@
 .hero-section {
     display: flex;
-    justify-content: space-around;
+    min-height: 60vh;
     align-items: center;
-    gap: 2rem;
+    justify-content: space-around;
+}
+
+.welcome-text-wrapper {
+    display: flex;
 }
 
 .text {
     font-size: 2.75rem;
     color: white;
-    width: 50%;
+    width: 45%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    text-shadow: 1px 1px 4px rgb(67, 11, 77);
+}
+
+.tagline {
+    font-size: 2rem;
 }
 
 .megaphone-img {
     width: 250px;
 }
 
+.guidelines {
+    color: white;
+}
+
+.guidelines header {
+    margin-bottom: 1.2rem;
+    font-size: 2rem;
+    text-decoration: underline;
+    margin-left: -1.5rem;
+}
+
+.list li {
+    color: rgb(242, 241, 241);
+    width: 80%;
+}
+
+.list li {
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+}
+
+@media screen and (max-width: 1550px) {
+
+    .text {
+        font-size: 2.25rem;
+    }
+    .tagline {
+        font-size: 1.75rem;
+    }
+    .megaphone-img {
+        width: 225px;
+    }
+
+}
+
+@media screen and (max-width: 1400px) {
+    .text {
+        font-size: 2rem;
+    }
+    .tagline {
+        font-size: 1.5rem;
+    }
+    .megaphone-img {
+        width: 200px;
+    }
+
+    .hero-section {
+        gap: 0.5rem;
+    }
+
+    .guidelines header {
+        font-size: 1.75rem;
+    }
+
+    .guidelines li {
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 1280px) {
+    .hero-section {
+        justify-content: center;
+    }
+    .text {
+        width: 60%;
+        margin-right: 4rem;
+        margin-right: 1rem;
+    }
+    .welcome-text {
+        width: 60%;
+    }
+    .welcome-text-wrapper {
+        justify-content: center;
+    }
+
+    .tagline {
+        margin-left: 2rem;
+    }
+    
+}
+
+@media screen and (max-width: 1100px) {
+    .hero-section {
+        flex-direction: column;
+        min-height: 90vh;
+        justify-content: space-around;
+    }
+
+    .text {
+        width: 60%;
+    }
+
+    .welcome-text-wrapper {
+        gap: 1rem;
+    }
+
+    .guidelines {
+        margin-bottom: 4rem;
+    }
+
+    .list li {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .text {
+        width: 80%;
+    }
+    .welcome-text {
+        width: 360px;
+        margin-right: 2rem;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .megaphone-img {
+        width: 180px;
+    }
+    .text {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .welcome-text {
+        font-size: 3.5rem;
+        margin-right: 0;
+    }
+    .text {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .guidelines header {
+        font-size: 1.3rem;
+    }
+}
+
 @media screen and (max-width: 550px) {
 
     .hero-section {
+        width: 100%;
         flex-direction: column;
     }
 
     .text {
         font-size: 1.25rem;
         width: 90%;
+    }
+
+    .megaphone-img {
+        width: 200px;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+
+    .tagline {
+        margin: 1rem 0 0 -1rem;
+    }
+
+    .text {
+        width: 100%;
+        align-items: center;
+    }
+
+    .welcome-text-wrapper {
+        margin-top: 1rem;
+        width: 100vw;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .welcome-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+        width: 95%;
+    }
+
+    .description {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .megaphone-img {

@@ -1,0 +1,103 @@
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  background: rgb(112,60,170);
+  background: no-repeat linear-gradient(0deg, rgba(112,60,170,1) 0%, rgba(164,53,254,1) 35%, rgba(193,144,232,1) 100%);
+}
+
+.admin-image {
+  width: 450px;
+}
+
+.login-container {
+    min-height: 80vh;
+    height: calc(100vh - 11.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-form {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 45vh;
+    width: 35%;
+    min-width: 450px;
+  }
+
+  .header {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.75rem;
+    color: rgb(79, 36, 128);
+    font-weight: 800;
+  }
+  
+  .login-username, .login-password {
+    margin: 0.5rem;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .login-submit {
+    width: 100%;
+    padding: 1rem;
+    background-color: rgb(79, 36, 128);
+    color: white;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: 0.1s ease-in;
+    margin-top: 1rem;
+  }
+
+  .login-submit:hover {
+    background-color: rgb(129, 54, 214);
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  input:focus::placeholder {
+    color: transparent;
+  }
+
+  @media screen and (max-width: 1070px) {
+    .image-wrapper {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    .login-form {
+        width: 100%;
+        min-width: unset;
+        height: 320px;
+    }
+    .header {
+        font-size: 1.5rem;
+        padding: 0;
+    }
+    .login-username, .login-password {
+        padding: 0.75rem;
+    }
+    .login-submit {
+        padding: 0.75rem;
+    }
+  }
+  

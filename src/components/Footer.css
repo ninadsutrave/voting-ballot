@@ -7,6 +7,59 @@
     padding: 2rem;
 }
 
+.social-media {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.social-media-icons {
+    display: flex;
+    gap: 0.25rem;
+    margin-top: 0.3rem;
+}
+
+.youtube-icon {
+    margin: 0 0.2rem;
+}
+
+.icon {
+    width: 20px;
+    cursor: pointer;
+
+    -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.icon:hover {
+    animation-name: bounce;
+  -moz-animation-name: bounce;
+}
+
+@keyframes bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		-ms-transform:     translateY(0);
+		transform:         translateY(0)
+	}
+	40% {
+		-webkit-transform: translateY(-4px);
+		-ms-transform:     translateY(-4px);
+		transform:         translateY(-4px)
+	}
+	60% {
+		-webkit-transform: translateY(-2px);
+		-ms-transform:     translateY(-2px);
+		transform:         translateY(-2px)
+	}
+}
+
 .links {
     display: flex;
     gap: 2rem;
@@ -33,13 +86,13 @@
     color: white;
 }
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1070px) {
     .links {
         flex-direction: column;
     }
 }
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 550px) {
     .footer {
         flex-direction: column;
         gap: 1.5rem;

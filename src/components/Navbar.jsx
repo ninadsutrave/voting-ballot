@@ -1,5 +1,6 @@
 import { useState } from "react";
 import logo from '../assets/logo.png';
+import { Link } from 'react-router-dom';
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -35,15 +36,15 @@ export default function Navbar() {
           isNavExpanded ? "navigation-menu expanded" : "navigation-menu"
         }
       >
-        <ul>
+        <ul onClick={() => {setIsNavExpanded(!isNavExpanded);}}>
           <li>
-            <a href="/home">Guidelines</a>
+            <Link to="/">Guidelines</Link>
           </li>
           <li>
-            <a href="/about">Vote Now!</a>
+            <Link to="/">Vote Now!</Link>
           </li>
           <li>
-            <a href="/contact">Admin</a>
+            <Link to="/admin">Admin</Link>
           </li>
         </ul>
       </div>

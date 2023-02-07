@@ -1,6 +1,7 @@
 import React from 'react'
 import ShapeDivider from '../components/ShapeDivider';
 import Hero from '../components/Hero';
+import Form from '../components/Form';
 import './Home.css';
 
 const Home = () => {
@@ -10,8 +11,9 @@ const Home = () => {
         <Hero/>
       </div>
       <ShapeDivider/>
+      <Form/>
     </div>
   )
 }
 
-export default Home
+export default Home;

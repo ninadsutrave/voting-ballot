@@ -1,5 +1,5 @@
 .Intro {
-    min-height: 80vh;
+    min-height: 65vh;
     background: rgb(112,60,170);
     background: no-repeat linear-gradient(0deg, rgba(112,60,170,1) 0%, rgba(164,53,254,1) 35%, rgba(193,144,232,1) 100%);
 }
