@@ -154,6 +154,7 @@
     .welcome-text {
         font-size: 3rem;
         margin-right: 0;
+        margin-top: 1.5rem;
     }
     .text {
         width: 100%;
@@ -168,6 +169,7 @@
     .guidelines {
         width: 90%;
         margin-left: 1rem;
+        margin: 2rem 0 2rem 0;
     }
 }
 

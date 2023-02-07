@@ -41,11 +41,11 @@ const [checked, setChecked] = useState(new Array(15).fill(false))
         alert("You can only vote once!")
       }
       else {
-        alert("Invalid credentials")
+        alert("Invalid token")
       }
     })
     .catch(err => {
-      alert("Something went wrong")
+      alert("Invalid token")
     })
 
   }

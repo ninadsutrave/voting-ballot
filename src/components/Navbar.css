@@ -78,10 +78,6 @@
     display: none;
   }
   
-  .hamburger:hover {
-    background-color: #2642af;
-  }
-  
   @media screen and (max-width: 850px) {
     .logo {
       width: 80px;
