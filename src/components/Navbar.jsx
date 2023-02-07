@@ -5,6 +5,11 @@ import "./Navbar.css";
 
 export default function Navbar() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
+  console.log(window.location.pathname);
+
+  const handleClick = () => {
+    document.getElementById('voting-section').scrollIntoView();
+  }
 
   return (
     <nav className="navigation">
@@ -40,8 +45,8 @@ export default function Navbar() {
           <li>
             <Link to="/">Guidelines</Link>
           </li>
-          <li>
-            <Link to="/">Vote Now!</Link>
+          <li onClick={handleClick}>
+            <Link  to="/">Vote Now!</Link>
           </li>
           <li>
             <Link to="/admin">Admin</Link>

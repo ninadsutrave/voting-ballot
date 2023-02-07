@@ -51,7 +51,7 @@ const [checked, setChecked] = useState(new Array(15).fill(false))
   }
 
   return (
-    <div className="voting-section">
+    <div className="voting-section" id="voting-section">
         <div className="img-wrapper">
             <img alt="Voting Image" src={votingImage} />
         </div>

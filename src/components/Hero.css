@@ -93,8 +93,6 @@
     }
     .text {
         width: 60%;
-        margin-right: 4rem;
-        margin-right: 1rem;
     }
     .welcome-text {
         width: 60%;
@@ -154,7 +152,7 @@
 
 @media screen and (max-width: 750px) {
     .welcome-text {
-        font-size: 3.5rem;
+        font-size: 3rem;
         margin-right: 0;
     }
     .text {
@@ -164,6 +162,12 @@
 
     .guidelines header {
         font-size: 1.3rem;
+        margin-left: 0;
+    }
+
+    .guidelines {
+        width: 90%;
+        margin-left: 1rem;
     }
 }
 
@@ -209,7 +213,6 @@
         align-items: center;
         justify-content: center;
         font-size: 2.5rem;
-        width: 95%;
     }
 
     .description {
@@ -220,7 +223,7 @@
     }
 
     .megaphone-img {
-        width: 200px;
+        width: 180px;
     }
 
 }

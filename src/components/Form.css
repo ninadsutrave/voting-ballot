@@ -132,7 +132,7 @@ input[type=radio] {
     margin-left: 1.5rem;
   }
 
-  input[type=text], select {
+  .key-input, select {
     width: 80%;
     padding: 12px 20px;
     margin: 8px 0;
