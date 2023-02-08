@@ -6,10 +6,12 @@ const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     if(username === "PEHCHAANES-1234" && password === "ELECTIONS2022") {
       sessionStorage.setItem("pass_key", "V55WxiB(J%utJc^Yzp5rt^&p$S9ji!XOsk4n7JLrf-2iWroX9kAsifPYjSVtu5JJ&&WF-XjCcsBh58vrdfOzXpbp^IcpsBr$EsHJ8V3itJ2uz99YikcnJu-n2M4-JWcVecrj%gc5o-IW74LVJg0M");
     }
+    window.location.reload();
   };
 
   return (

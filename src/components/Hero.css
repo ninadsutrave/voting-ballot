@@ -136,7 +136,7 @@
         width: 80%;
     }
     .welcome-text {
-        width: 360px;
+        width: min(360px, 95vh);
         margin-right: 2rem;
     }
 }
