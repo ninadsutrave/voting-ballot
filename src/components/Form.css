@@ -32,6 +32,7 @@
 
 input[type=radio] {
   margin: 0 15px 0 20px;
+  accent-color: rgba(112,60,170,1);
 }
 
 .voter-form {

@@ -136,7 +136,7 @@
         width: 80%;
     }
     .welcome-text {
-        width: min(360px, 95vh);
+        width: min(360px, calc(100vw - 2rem));
         margin-right: 2rem;
     }
 }
@@ -168,8 +168,7 @@
 
     .guidelines {
         width: 90%;
-        margin-left: 2rem;
-        margin: 2rem 0 4rem 0;
+        margin: 2rem 0 4rem 1.5rem;
     }
 }
 
@@ -208,7 +207,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-left: 2rem;
     }
 
     .welcome-text {
@@ -216,6 +214,10 @@
         align-items: center;
         justify-content: center;
         font-size: 2.5rem;
+    }
+
+    .megaphone-img {
+        margin-left: 2rem;
     }
 
     .description {
