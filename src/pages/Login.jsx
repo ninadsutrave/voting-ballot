@@ -8,8 +8,8 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(username === "PEHCHAANES-1234" && password === "ELECTIONS2022") {
-      sessionStorage.setItem("pass_key", "V55WxiB(J%utJc^Yzp5rt^&p$S9ji!XOsk4n7JLrf-2iWroX9kAsifPYjSVtu5JJ&&WF-XjCcsBh58vrdfOzXpbp^IcpsBr$EsHJ8V3itJ2uz99YikcnJu-n2M4-JWcVecrj%gc5o-IW74LVJg0M");
+    if(username === import.meta.env.VITE_USERNAME && password === import.meta.env.VITE_PASSWORD) {
+      sessionStorage.setItem("pass_key", import.meta.env.VITE_PASS_KEY);
     }
     window.location.reload(false);
   };

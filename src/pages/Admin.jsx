@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Filter from "../components/Filter";
 import Results from "../components/Results";
@@ -35,7 +35,7 @@ const Admin = () => {
 
   useEffect(() => {
 
-    axios.get(process.env.REACT_APP_BACKEND_URL + 'admin/viewVoters')
+    axios.get(import.meta.env.VITE_BASE_URL + 'admin/viewVoters')
     .then(res => setList(res.data))
     .catch(err => console.log(err))
 
@@ -72,11 +72,10 @@ const Admin = () => {
     setShow(true);
     setTime(time.substr(0, time.indexOf(' ')));
 
-    axios.get(process.env.REACT_APP_BACKEND_URL + 'admin/viewResults')
+    axios.get(import.meta.env.VITE_BASE_URL + 'admin/viewResults')
     .then(res => {
       console.log(res.data[0])
       setResults({
-        
         president: {
           candidateA: res.data[0].candidateA,
           candidateB: res.data[0].candidateB
@@ -101,11 +100,11 @@ const Admin = () => {
     })
     .catch(err => console.log(err))
 
-}
+  }
 
   const handleChange = (e) => {
     
-    axios.get(process.env.REACT_APP_BACKEND_URL + 'admin/viewVoters?searchItem='+e.target.value)
+    axios.get(import.meta.env.VITE_BASE_URL + 'admin/viewVoters?searchItem='+e.target.value)
     .then(res => setList(res.data))
     .catch(err => console.log(err))
 
@@ -115,9 +114,9 @@ const Admin = () => {
 
   return (
     <div className="admin-page">
-      <Results show={show} showResults={showResults} results={results} time={time} />
-      <Filter optimisedSearchHandler={optimisedSearchHandler} checked={checked} handleCheck={handleCheck} />
-      <Data list={list} checked={checked} />
+        <Results show={show} showResults={showResults} results={results} />
+        <Filter optimisedSearchHandler={optimisedSearchHandler} checked={checked} handleCheck={handleCheck} />
+        <Data list={list} checked={checked} />
     </div>
   );
 };

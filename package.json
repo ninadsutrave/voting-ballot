@@ -4,7 +4,13 @@
   "version": "0.0.0",
   "description": "An anonymous voting platform for Governing Body Election of Pehchaan - Ek Safar",
   "type": "module",
-  "keywords": ["Voting", "Platform", "Anonymous", "Anonymity", "Voting Platform"],
+  "keywords": [
+    "Voting",
+    "Platform",
+    "Anonymous",
+    "Anonymity",
+    "Voting Platform"
+  ],
   "author": "Ninad Sutrave",
   "license": "MIT",
   "scripts": {
@@ -16,7 +22,6 @@
     "axios": "^1.3.2",
     "dotenv": "^16.0.3",
     "react": "^18.2.0",
-    "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.0"
   },

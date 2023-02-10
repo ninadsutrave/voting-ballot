@@ -28,18 +28,18 @@
     cursor: pointer;
 
     -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
 }
 
 .icon:hover {
     animation-name: bounce;
-  -moz-animation-name: bounce;
+    -moz-animation-name: bounce;
 }
 
 @keyframes bounce {
@@ -96,5 +96,6 @@
     .footer {
         flex-direction: column;
         gap: 1.5rem;
+        font-size: 0.8rem;
     }
 }

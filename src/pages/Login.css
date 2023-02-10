@@ -30,6 +30,7 @@
     height: 45vh;
     width: 35%;
     min-width: 450px;
+    min-height: 400px;
   }
 
   .header {

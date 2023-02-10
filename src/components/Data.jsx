@@ -1,5 +1,5 @@
 import React from 'react';
-import Table from 'react-bootstrap/Table';
+import './Data.css';
 
 const Data = ({list, checked}) => {
 
@@ -7,7 +7,7 @@ const Data = ({list, checked}) => {
         e.preventDefault()
         console.log(voter)
     
-        axios.post(process.env.REACT_APP_BACKEND_URL + 'admin/createPassword', {
+        axios.post(import.meta.env.VITE_BASE_URL + 'admin/createPassword', {
           name: voter.name,
           pehchaanId: voter.pehchaanId
         })
@@ -16,10 +16,10 @@ const Data = ({list, checked}) => {
     }
 
   return (
-    <div>
+    <div className="table-wrapper">
     {
         list && 
-        <Table striped bordered hover>
+        <table striped bordered hover>
             <thead>
                 <tr>
                 <th>Sr. No.</th>
@@ -35,25 +35,25 @@ const Data = ({list, checked}) => {
                         if(checked) {
                             if(!voter.voted) {
                                 return <tr>
-                                <td>{index+1}</td>
-                                <td>{voter.name}</td>
-                                <td><button className="mail-button" onClick={generateToken(voter)}>Send Token</button></td>
-                                <td><strong>{(voter.voted)?"Voted":"-"}</strong></td>
+                                <td className={"data"+index}>{index+1}</td>
+                                <td className={"data"+index}>{voter.name}</td>
+                                <td className={"data"+index}><button className="mail-button" onClick={generateToken(voter)}>Send Token</button></td>
+                                <td className={"data"+index}><strong>{(voter.voted)?"Voted":"-"}</strong></td>
                                 </tr>
                             }
                         }
                         else {        
                             return <tr>
-                                <td>{index+1}</td>
-                                <td>{voter.name}</td>
-                                <td><button className="mail-button" onClick={generateToken(voter)}>Send Token</button></td>
+                                <td className={"data"+index}>{index+1}</td>
+                                <td className={"data"+index}>{voter.name}</td>
+                                <td className={"data"+index+" buttons"}><button className="mail-button" onClick={generateToken(voter)}>Send Token</button></td>
                                 <td><strong>{(voter.voted)?"Voted":"-"}</strong></td>
                             </tr>
                         }
                     })
                 }
             </tbody>
-        </Table>
+        </table>
     }
     </div>
   )

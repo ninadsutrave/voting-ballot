@@ -1,0 +1,17 @@
+.view-results {
+    width: 200px;
+    padding: 0.5rem 1rem;
+    background-color: rgb(79, 36, 128);
+    color: white;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: 0.1s ease-in;
+    margin: 1rem 0 2rem 11rem;
+}
+
+.view-results:hover {
+    background-color: rgb(129, 54, 214);
+  }
