@@ -15,7 +15,7 @@ const App = () => {
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/admin" element={(sessionStorage.getItem("pass_key") !== import.meta.env.VITE_PASS_KEY)?<Admin/>:<Login/>} />
+        <Route path="/admin" element={(sessionStorage.getItem("pass_key") === import.meta.env.VITE_PASS_KEY)?<Admin/>:<Login/>} />
       </Routes>
       <Footer/>
     </div>
