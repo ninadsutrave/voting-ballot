@@ -11,26 +11,23 @@ const Admin = () => {
   const [checked, setChecked] = useState(false);
   const [show, setShow] = useState(false);
   const [results, setResults] = useState({
-    president: {
-      candidateA: 0,
-      candidateB: 0
-    }, 
-    vicePresident: {
-      candidateC: 0,
-      candidateD: 0
-    }, 
-    secretary1: {
-      candidateE: 0,
-      candidateF: 0
-    },
-    secretary2: {
-      candidateG: 0,
-      candidateH: 0
-    },
-    treasurer: {
-      candidateI: 0,
-      candidateJ: 0
-    }
+    A: 0,
+    B: 0,
+    C: 0,
+    D: 0,
+    E: 0,
+    F: 0,
+    G: 0,
+    H: 0,
+    I: 0,
+    J: 0,
+    K: 0,
+    L: 0,
+    M: 0,
+    N: 0,
+    O: 0,
+    P: 0,
+    Q: 0
   })
 
   useEffect(() => {
@@ -76,38 +73,32 @@ const Admin = () => {
     .then(res => {
       console.log(res.data[0])
       setResults({
-        president: {
-          candidateA: res.data[0].candidateA,
-          candidateB: res.data[0].candidateB
-        }, 
-        vicePresident: {
-          candidateC: res.data[0].candidateC,
-          candidateD: res.data[0].candidateD
-        }, 
-        secretary1: {
-          candidateE: res.data[0].candidateE,
-          candidateF: res.data[0].candidateF
-        },
-        secretary2: {
-          candidateG: res.data[0].candidateG,
-          candidateH: res.data[0].candidateH
-        },
-        treasurer: {
-          candidateI: res.data[0].candidateI,
-          candidateJ: res.data[0].candidateJ
-        }
+        A: res.data[0].A,
+        B: res.data[0].B,
+        C: res.data[0].C,
+        D: res.data[0].D,
+        E: res.data[0].E,
+        F: res.data[0].F,
+        G: res.data[0].G,
+        H: res.data[0].H,
+        I: res.data[0].I,
+        J: res.data[0].J,
+        K: res.data[0].K,
+        L: res.data[0].L,
+        M: res.data[0].M,
+        N: res.data[0].N,
+        O: res.data[0].O,
+        P: res.data[0].P,
+        Q: res.data[0].Q
       })
     })
     .catch(err => console.log(err))
-
   }
 
   const handleChange = (e) => {
-    
     axios.get(import.meta.env.VITE_BASE_URL + 'admin/viewVoters?searchItem='+e.target.value)
     .then(res => setList(res.data))
     .catch(err => console.log(err))
-
   }
 
   const optimisedSearchHandler = debounceFunc(handleChange, 500)
