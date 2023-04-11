@@ -46,6 +46,8 @@ This platform was primarily developed for the Governing Body Elections of [Pehch
 
 https://pehchaan.netlify.app/
 
+[View on Dribbble](https://dribbble.com/shots/20651252-Voting-Ballot)
+
 The application will be used for future elections of Pehchaan, and thus the admin access is restricted.
 
 ## License
