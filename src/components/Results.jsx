@@ -10,17 +10,17 @@ const Results = ({show, showResults, results}) => {
         <button className="view-results button-color" variant="primary" onClick={showResults}>View Results</button>
         {show &&
             <div className="results">
-                <p><h4>Results as of now ({time.substring(0, time.indexOf(' '))}): </h4></p>
-                <p>
-                    <h5>President</h5>
+                <p className="results-heading"><h3>Results as of now ({time.substring(0, time.indexOf(' '))}): </h3></p>
+                <p className="category">
+                    <h4>President</h4>
                     <ul>
                     <li>Mr. Sugam Kumar : {results.A} </li>
                     <li>Ms. Reetika {results.B} </li>
                     <li>Ms. Reetika {results.C} </li>
                     </ul>
                 </p> 
-                <p>
-                    <h5>Vice President</h5>
+                <p className="category">
+                    <h4>Vice President</h4>
                     <ul>
                     <li>Ms. Dipika Rajendra Kanchan : {results.D} </li>
                     <li>Ms. Reetika : {results.E} </li>
@@ -29,16 +29,16 @@ const Results = ({show, showResults, results}) => {
                     <li>Mr. Pratham : {results.H} </li>
                     </ul>
                 </p> 
-                <p>
-                    <h5>Secretary 1</h5>
+                <p className="category">
+                    <h4>Secretary 1</h4>
                     <ul>
                     <li>Ms. Yashaswini Vajja : {results.I} </li>
                     <li>Mr. Pratham: {results.J} </li>
                     <li>Mr. Nehal Sonkar: {results.K} </li>
                     </ul>
                 </p> 
-                <p>
-                    <h5>Secretary 2</h5>
+                <p className="category">
+                    <h4>Secretary 2</h4>
                     <ul>
                     <li>Mr. Sugam Kumar : {results.L} </li>
                     <li>Mr. Aditya Mote : {results.M} </li>
@@ -46,8 +46,8 @@ const Results = ({show, showResults, results}) => {
                     <li>Mr. Shankar Lal : {results.O} </li>
                     </ul>
                 </p>
-                <p>
-                    <h5>Treasurer</h5>
+                <p className="category">
+                    <h4>Treasurer</h4>
                     <ul>
                     <li>Ms. Dipika Rajendra Kanchan : {results.P} </li>
                     <li>Mr. Aditya Mote : {results.Q} </li>
