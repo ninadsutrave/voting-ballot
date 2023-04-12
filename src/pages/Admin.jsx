@@ -64,10 +64,8 @@ const Admin = () => {
     }
 
     localStorage.setItem('Last', date);
-    const time = date.toTimeString();
 
     setShow(true);
-    setTime(time.substr(0, time.indexOf(' ')));
 
     axios.get(import.meta.env.VITE_BASE_URL + 'admin/viewResults')
     .then(res => {
