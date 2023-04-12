@@ -23,6 +23,7 @@ const [checked, setChecked] = useState(new Array(17).fill(false))
     e.preventDefault()
     axios.patch(import.meta.env.VITE_APP_BASE_URL + 'admin/updateVote', formDetails)
     .then(res => {
+        console.log(res)
       if(res.data === "Successful") {
         setFormDetails({
           secretToken: "",
