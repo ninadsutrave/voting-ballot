@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="text">
         <div className="welcome-text-wrapper">
           <h1 className="welcome-text">
-            Welcome to PES Open House '22!
+            Welcome to PES Open House '23!
           </h1>
           <div className="description">
             <img className="megaphone-img" alt="Megaphone Illustration" src={Megaphone} />
