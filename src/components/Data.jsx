@@ -4,7 +4,7 @@ import './Data.css';
 
 const Data = ({list, checked}) => {
 
-    const [colors, setColors] = useState(new Array(list.length).fill('rgb(129, 54, 214)'));
+    const [colors, setColors] = useState(new Array(145).fill('rgb(129, 54, 214)'));
 
     const generateToken = (voter) => (e) => {
         e.preventDefault()
