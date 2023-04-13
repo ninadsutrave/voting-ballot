@@ -6,7 +6,7 @@ const Data = ({list, checked}) => {
 
     const [colors, setColors] = useState(new Array(145).fill('rgb(129, 54, 214)'));
 
-    const generateToken = (voter) => (e) => {
+    const generateToken = (voter, colors) => (e) => {
         e.preventDefault()
         console.log(voter)
     
@@ -16,8 +16,8 @@ const Data = ({list, checked}) => {
         })
         .then((res) => {
             console.log(res)
-            let arr = colors
-            arr[voter.index] = 'rgb(28, 134, 78)'
+            let arr = colors.slice()
+            arr[voter.index] = 'rgb(28, 134, 78)';
             setColors(arr)
         })
         .catch(err => console.log(err))
@@ -40,12 +40,13 @@ const Data = ({list, checked}) => {
             <tbody>
                 {
                     list.map((voter, index) => {
+                        console.log(colors[index])
                         if(checked) {
                             if(!voter.voted) {
                                 return <tr>
                                 <td className={"data"+index}>{index+1}</td>
                                 <td className={"data"+index}>{voter.name}</td>
-                                <td className={"data"+index}><button className="mail-button" style={{backgroundColor: `${colors[voter.index]}`}} onClick={generateToken(voter)}>Send Token</button></td>
+                                <td className={"data"+index}><button className="mail-button" style={{backgroundColor: `${colors[index]}`}} onClick={generateToken(voter)}>Send Token</button></td>
                                 <td className={"data"+index}><strong>{(voter.voted)?"Voted":"-"}</strong></td>
                                 </tr>
                             }
@@ -54,7 +55,7 @@ const Data = ({list, checked}) => {
                             return <tr>
                                 <td className={"data"+index}>{index+1}</td>
                                 <td className={"data"+index}>{voter.name}</td>
-                                <td className={"data"+index+" buttons"}><button className="mail-button" onClick={generateToken(voter)}>Send Token</button></td>
+                                <td className={"data"+index+" buttons"}><button className="mail-button" style={{backgroundColor: `${colors[index]}`}} onClick={generateToken(voter)}>Send Token</button></td>
                                 <td><strong>{(voter.voted)?"Voted":"-"}</strong></td>
                             </tr>
                         }
