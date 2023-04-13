@@ -51,7 +51,7 @@ const Data = ({list, checked}) => {
                                 return <tr>
                                 <td className={"data"+index}>{index+1}</td>
                                 <td className={"data"+index}>{voter.name}</td>
-                                <td className={"data"+index}><button className="mail-button" style={{backgroundColor: `${colors[index]}`}} onClick={generateToken(voter)}>Send Token</button></td>
+                                <td className={"data"+index}><button className="mail-button" style={{backgroundColor: `${colors[voter.index]}`}} onClick={generateToken(voter)}>Send Token</button></td>
                                 <td className={"data"+index}><strong>{(voter.voted)?"Voted":"-"}</strong></td>
                                 </tr>
                             }
@@ -60,7 +60,7 @@ const Data = ({list, checked}) => {
                             return <tr>
                                 <td className={"data"+index}>{index+1}</td>
                                 <td className={"data"+index}>{voter.name}</td>
-                                <td className={"data"+index+" buttons"}><button className="mail-button" style={{backgroundColor: `${colors[index]}`}} onClick={generateToken(voter)}>Send Token</button></td>
+                                <td className={"data"+index+" buttons"}><button className="mail-button" style={{backgroundColor: `${colors[voter.index]}`}} onClick={generateToken(voter)}>Send Token</button></td>
                                 <td><strong>{(voter.voted)?"Voted":"-"}</strong></td>
                             </tr>
                         }
