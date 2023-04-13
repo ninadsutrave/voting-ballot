@@ -45,8 +45,10 @@ th {
     padding: 0.9rem 1.5rem;
     border-radius: 15px;
     cursor: pointer;
-    transition: 0.1s ease-in
+    transition: 0.1s ease-in;
 }
+
+
 
 .mail-button:hover {
     background-color: rgb(171, 97, 255);
