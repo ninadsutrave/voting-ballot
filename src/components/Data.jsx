@@ -6,7 +6,7 @@ const Data = ({list, checked}) => {
 
     const [colors, setColors] = useState(new Array(145).fill('rgb(129, 54, 214)'));
 
-    const generateToken = (voter, colors) => (e) => {
+    const generateToken = (voter) => (e) => {
         e.preventDefault()
         console.log(voter)
     
@@ -17,10 +17,15 @@ const Data = ({list, checked}) => {
         .then((res) => {
             console.log(res)
             let arr = colors.slice()
-            arr[voter.index] = 'rgb(28, 134, 78)';
+            arr[voter.index] = 'rgb(45 174 101)';
             setColors(arr)
         })
-        .catch(err => console.log(err))
+        .catch((err) => {
+            console.log(err)
+            let arr = colors.slice()
+            arr[voter.index] = 'rgb(174 45 51)';
+            setColors(arr)
+        })
     }
 
   return (
