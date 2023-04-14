@@ -25,9 +25,7 @@ const Admin = () => {
     L: 0,
     M: 0,
     N: 0,
-    O: 0,
-    P: 0,
-    Q: 0
+    O: 0
   })
 
   useEffect(() => {
@@ -85,9 +83,7 @@ const Admin = () => {
         L: res.data[0].L,
         M: res.data[0].M,
         N: res.data[0].N,
-        O: res.data[0].O,
-        P: res.data[0].P,
-        Q: res.data[0].Q
+        O: res.data[0].O
       })
     })
     .catch(err => console.log(err))
